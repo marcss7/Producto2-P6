@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="btModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="id_categoria" />
+    </Key>
+    <Property Name="id_categoria" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombre_categoria" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ruta_imagen" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="servicios" Relationship="Self.fk_categorias" FromRole="categorias" ToRole="servicios" />
+  </EntityType>
+  <EntityType Name="Factura">
+    <Key>
+      <PropertyRef Name="id_factura" />
+    </Key>
+    <Property Name="id_factura" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="usuario_emisor" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="usuario_receptor" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="concepto" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="importe" Type="Double" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="servicios" Relationship="Self.fk_servicios_4" FromRole="facturas" ToRole="servicios" />
+    <NavigationProperty Name="usuarios" Relationship="Self.fk_usuarios_5" FromRole="facturas" ToRole="usuarios" />
+    <NavigationProperty Name="usuarios1" Relationship="Self.fk_usuarios_6" FromRole="facturas" ToRole="usuarios" />
+  </EntityType>
+  <EntityType Name="Movimiento">
+    <Key>
+      <PropertyRef Name="id_movimiento" />
+    </Key>
+    <Property Name="id_movimiento" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="usuario_origen" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="usuario_destino" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="concepto" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="comentarios" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="horas" Type="Double" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="servicios" Relationship="Self.fk_servicios_3" FromRole="movimientos" ToRole="servicios" />
+    <NavigationProperty Name="usuarios" Relationship="Self.fk_usuarios_3" FromRole="movimientos" ToRole="usuarios" />
+    <NavigationProperty Name="usuarios1" Relationship="Self.fk_usuarios_4" FromRole="movimientos" ToRole="usuarios" />
+  </EntityType>
+  <EntityType Name="Servicio">
+    <Key>
+      <PropertyRef Name="id_servicio" />
+    </Key>
+    <Property Name="id_servicio" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="titulo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="id_usuario" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="id_categoria" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_creacion" Type="DateTime" Precision="3" />
+    <Property Name="tipo_servicio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="categorias" Relationship="Self.fk_categorias" FromRole="servicios" ToRole="categorias" />
+    <NavigationProperty Name="facturas" Relationship="Self.fk_servicios_4" FromRole="servicios" ToRole="facturas" />
+    <NavigationProperty Name="movimientos" Relationship="Self.fk_servicios_3" FromRole="servicios" ToRole="movimientos" />
+    <NavigationProperty Name="solicitudes" Relationship="Self.fk_servicios_2" FromRole="servicios" ToRole="solicitudes" />
+    <NavigationProperty Name="tipo_servicio1" Relationship="Self.fk_tipo_servicio" FromRole="servicios" ToRole="tipo_servicio" />
+    <NavigationProperty Name="usuarios" Relationship="Self.fk_usuarios_1" FromRole="servicios" ToRole="usuarios" />
+  </EntityType>
+  <EntityType Name="Solicitud">
+    <Key>
+      <PropertyRef Name="id_solicitud" />
+    </Key>
+    <Property Name="id_solicitud" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_emisor" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="concepto" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_creacion" Type="DateTime" Precision="3" />
+    <Property Name="aceptada" Type="Boolean" />
+    <NavigationProperty Name="servicios" Relationship="Self.fk_servicios_2" FromRole="solicitudes" ToRole="servicios" />
+    <NavigationProperty Name="usuarios" Relationship="Self.fk_usuarios_2" FromRole="solicitudes" ToRole="usuarios" />
+  </EntityType>
+  <EntityType Name="TipoServicio">
+    <Key>
+      <PropertyRef Name="id_tipo_servicio" />
+    </Key>
+    <Property Name="id_tipo_servicio" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tipo_servicio" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="servicios" Relationship="Self.fk_tipo_servicio" FromRole="tipo_servicio" ToRole="servicios" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombre_usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pass" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="alias" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telefono" Type="Int32" />
+    <Property Name="fecha_nacimiento" Type="DateTime" Precision="3" />
+    <Property Name="balance" Type="Decimal" Precision="4" Scale="2" />
+    <NavigationProperty Name="facturas" Relationship="Self.fk_usuarios_5" FromRole="usuarios" ToRole="facturas" />
+    <NavigationProperty Name="facturas1" Relationship="Self.fk_usuarios_6" FromRole="usuarios" ToRole="facturas" />
+    <NavigationProperty Name="movimientos" Relationship="Self.fk_usuarios_3" FromRole="usuarios" ToRole="movimientos" />
+    <NavigationProperty Name="movimientos1" Relationship="Self.fk_usuarios_4" FromRole="usuarios" ToRole="movimientos" />
+    <NavigationProperty Name="servicios" Relationship="Self.fk_usuarios_1" FromRole="usuarios" ToRole="servicios" />
+    <NavigationProperty Name="solicitudes" Relationship="Self.fk_usuarios_2" FromRole="usuarios" ToRole="solicitudes" />
+  </EntityType>
+  <Association Name="fk_categorias">
+    <End Role="categorias" Type="btModel.Categoria" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="servicios" Type="btModel.Servicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categorias">
+        <PropertyRef Name="id_categoria" />
+      </Principal>
+      <Dependent Role="servicios">
+        <PropertyRef Name="id_categoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_servicios_4">
+    <End Role="servicios" Type="btModel.Servicio" Multiplicity="1" />
+    <End Role="facturas" Type="btModel.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="servicios">
+        <PropertyRef Name="id_servicio" />
+      </Principal>
+      <Dependent Role="facturas">
+        <PropertyRef Name="concepto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_usuarios_5">
+    <End Role="usuarios" Type="btModel.Usuario" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="facturas" Type="btModel.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuarios">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="facturas">
+        <PropertyRef Name="usuario_emisor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_usuarios_6">
+    <End Role="usuarios" Type="btModel.Usuario" Multiplicity="1" />
+    <End Role="facturas" Type="btModel.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuarios">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="facturas">
+        <PropertyRef Name="usuario_receptor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_servicios_3">
+    <End Role="servicios" Type="btModel.Servicio" Multiplicity="1" />
+    <End Role="movimientos" Type="btModel.Movimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="servicios">
+        <PropertyRef Name="id_servicio" />
+      </Principal>
+      <Dependent Role="movimientos">
+        <PropertyRef Name="concepto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_usuarios_3">
+    <End Role="usuarios" Type="btModel.Usuario" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="movimientos" Type="btModel.Movimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuarios">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="movimientos">
+        <PropertyRef Name="usuario_origen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_usuarios_4">
+    <End Role="usuarios" Type="btModel.Usuario" Multiplicity="1" />
+    <End Role="movimientos" Type="btModel.Movimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuarios">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="movimientos">
+        <PropertyRef Name="usuario_destino" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_servicios_2">
+    <End Role="servicios" Type="btModel.Servicio" Multiplicity="0..1" />
+    <End Role="solicitudes" Type="btModel.Solicitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="servicios">
+        <PropertyRef Name="id_servicio" />
+      </Principal>
+      <Dependent Role="solicitudes">
+        <PropertyRef Name="concepto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tipo_servicio">
+    <End Role="tipo_servicio" Type="btModel.TipoServicio" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="servicios" Type="btModel.Servicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipo_servicio">
+        <PropertyRef Name="id_tipo_servicio" />
+      </Principal>
+      <Dependent Role="servicios">
+        <PropertyRef Name="tipo_servicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_usuarios_1">
+    <End Role="usuarios" Type="btModel.Usuario" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="servicios" Type="btModel.Servicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuarios">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="servicios">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_usuarios_2">
+    <End Role="usuarios" Type="btModel.Usuario" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="solicitudes" Type="btModel.Solicitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuarios">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="solicitudes">
+        <PropertyRef Name="id_emisor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="btEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="categorias" EntityType="btModel.Categoria" />
+    <EntitySet Name="facturas" EntityType="btModel.Factura" />
+    <EntitySet Name="movimientos" EntityType="btModel.Movimiento" />
+    <EntitySet Name="servicios" EntityType="btModel.Servicio" />
+    <EntitySet Name="solicitudes" EntityType="btModel.Solicitud" />
+    <EntitySet Name="tipo_servicio" EntityType="btModel.TipoServicio" />
+    <EntitySet Name="usuarios" EntityType="btModel.Usuario" />
+    <AssociationSet Name="fk_categorias" Association="Self.fk_categorias">
+      <End Role="categorias" EntitySet="categorias" />
+      <End Role="servicios" EntitySet="servicios" />
+    </AssociationSet>
+    <AssociationSet Name="fk_servicios_4" Association="Self.fk_servicios_4">
+      <End Role="servicios" EntitySet="servicios" />
+      <End Role="facturas" EntitySet="facturas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_usuarios_5" Association="Self.fk_usuarios_5">
+      <End Role="usuarios" EntitySet="usuarios" />
+      <End Role="facturas" EntitySet="facturas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_usuarios_6" Association="Self.fk_usuarios_6">
+      <End Role="usuarios" EntitySet="usuarios" />
+      <End Role="facturas" EntitySet="facturas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_servicios_3" Association="Self.fk_servicios_3">
+      <End Role="servicios" EntitySet="servicios" />
+      <End Role="movimientos" EntitySet="movimientos" />
+    </AssociationSet>
+    <AssociationSet Name="fk_usuarios_3" Association="Self.fk_usuarios_3">
+      <End Role="usuarios" EntitySet="usuarios" />
+      <End Role="movimientos" EntitySet="movimientos" />
+    </AssociationSet>
+    <AssociationSet Name="fk_usuarios_4" Association="Self.fk_usuarios_4">
+      <End Role="usuarios" EntitySet="usuarios" />
+      <End Role="movimientos" EntitySet="movimientos" />
+    </AssociationSet>
+    <AssociationSet Name="fk_servicios_2" Association="Self.fk_servicios_2">
+      <End Role="servicios" EntitySet="servicios" />
+      <End Role="solicitudes" EntitySet="solicitudes" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tipo_servicio" Association="Self.fk_tipo_servicio">
+      <End Role="tipo_servicio" EntitySet="tipo_servicio" />
+      <End Role="servicios" EntitySet="servicios" />
+    </AssociationSet>
+    <AssociationSet Name="fk_usuarios_1" Association="Self.fk_usuarios_1">
+      <End Role="usuarios" EntitySet="usuarios" />
+      <End Role="servicios" EntitySet="servicios" />
+    </AssociationSet>
+    <AssociationSet Name="fk_usuarios_2" Association="Self.fk_usuarios_2">
+      <End Role="usuarios" EntitySet="usuarios" />
+      <End Role="solicitudes" EntitySet="solicitudes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

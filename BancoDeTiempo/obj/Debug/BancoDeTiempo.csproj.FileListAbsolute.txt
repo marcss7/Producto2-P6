@@ -1,0 +1,29 @@
+C:/Users/tereg/source/repos/BancoDeTiempo/BancoDeTiempo/bin/Debug/BancoDeTiempo.exe.config
+C:/Users/tereg/source/repos/BancoDeTiempo/BancoDeTiempo/bin/Debug/BancoDeTiempo.exe
+C:/Users/tereg/source/repos/BancoDeTiempo/BancoDeTiempo/bin/Debug/BancoDeTiempo.pdb
+C:/Users/tereg/source/repos/BancoDeTiempo/BancoDeTiempo/bin/Debug/EntityFramework.dll
+C:/Users/tereg/source/repos/BancoDeTiempo/BancoDeTiempo/bin/Debug/EntityFramework.SqlServer.dll
+C:/Users/tereg/source/repos/BancoDeTiempo/BancoDeTiempo/bin/Debug/EntityFramework.xml
+C:/Users/tereg/source/repos/BancoDeTiempo/BancoDeTiempo/bin/Debug/EntityFramework.SqlServer.xml
+C:/Users/tereg/source/repos/BancoDeTiempo/BancoDeTiempo/obj/Debug/BancoDeTiempo.csprojAssemblyReference.cache
+C:/Users/tereg/source/repos/BancoDeTiempo/BancoDeTiempo/obj/Debug/BancoDeTiempo.Properties.Resources.resources
+C:/Users/tereg/source/repos/BancoDeTiempo/BancoDeTiempo/obj/Debug/BancoDeTiempo.csproj.GenerateResource.cache
+C:/Users/tereg/source/repos/BancoDeTiempo/BancoDeTiempo/obj/Debug/BancoDeTiempo.csproj.CoreCompileInputs.cache
+C:/Users/tereg/source/repos/BancoDeTiempo/BancoDeTiempo/obj/Debug/BancoDeTiempo.csproj.CopyComplete
+C:/Users/tereg/source/repos/BancoDeTiempo/BancoDeTiempo/obj/Debug/BancoDeTiempo.exe
+C:/Users/tereg/source/repos/BancoDeTiempo/BancoDeTiempo/obj/Debug/BancoDeTiempo.pdb
+/Users/marcss7/OneDrive/DOBLE FP/Banco_NET/producto2(P6)_GarciaCeva_Teresa/BancoDeTiempo/BancoDeTiempo/bin/Debug/BancoDeTiempo.exe.config
+/Users/marcss7/OneDrive/DOBLE FP/Banco_NET/producto2(P6)_GarciaCeva_Teresa/BancoDeTiempo/BancoDeTiempo/bin/Debug/BancoDeTiempo.exe
+/Users/marcss7/OneDrive/DOBLE FP/Banco_NET/producto2(P6)_GarciaCeva_Teresa/BancoDeTiempo/BancoDeTiempo/bin/Debug/BancoDeTiempo.pdb
+/Users/marcss7/OneDrive/DOBLE FP/Banco_NET/producto2(P6)_GarciaCeva_Teresa/BancoDeTiempo/BancoDeTiempo/bin/Debug/EntityFramework.dll
+/Users/marcss7/OneDrive/DOBLE FP/Banco_NET/producto2(P6)_GarciaCeva_Teresa/BancoDeTiempo/BancoDeTiempo/bin/Debug/EntityFramework.SqlServer.dll
+/Users/marcss7/OneDrive/DOBLE FP/Banco_NET/producto2(P6)_GarciaCeva_Teresa/BancoDeTiempo/BancoDeTiempo/bin/Debug/EntityFramework.xml
+/Users/marcss7/OneDrive/DOBLE FP/Banco_NET/producto2(P6)_GarciaCeva_Teresa/BancoDeTiempo/BancoDeTiempo/bin/Debug/EntityFramework.SqlServer.xml
+/Users/marcss7/OneDrive/DOBLE FP/Banco_NET/producto2(P6)_GarciaCeva_Teresa/BancoDeTiempo/BancoDeTiempo/obj/Debug/BancoDeTiempo.csprojAssemblyReference.cache
+/Users/marcss7/OneDrive/DOBLE FP/Banco_NET/producto2(P6)_GarciaCeva_Teresa/BancoDeTiempo/BancoDeTiempo/obj/Debug/BancoDeTiempo.Properties.Resources.resources
+/Users/marcss7/OneDrive/DOBLE FP/Banco_NET/producto2(P6)_GarciaCeva_Teresa/BancoDeTiempo/BancoDeTiempo/obj/Debug/BancoDeTiempo.csproj.GenerateResource.cache
+/Users/marcss7/OneDrive/DOBLE FP/Banco_NET/producto2(P6)_GarciaCeva_Teresa/BancoDeTiempo/BancoDeTiempo/obj/Debug/BancoDeTiempo.csproj.CoreCompileInputs.cache
+/Users/marcss7/OneDrive/DOBLE FP/Banco_NET/producto2(P6)_GarciaCeva_Teresa/BancoDeTiempo/BancoDeTiempo/obj/Debug/BancoDeTiempo.csproj.CopyComplete
+/Users/marcss7/OneDrive/DOBLE FP/Banco_NET/producto2(P6)_GarciaCeva_Teresa/BancoDeTiempo/BancoDeTiempo/obj/Debug/BancoDeTiempo.exe
+/Users/marcss7/OneDrive/DOBLE FP/Banco_NET/producto2(P6)_GarciaCeva_Teresa/BancoDeTiempo/BancoDeTiempo/obj/Debug/BancoDeTiempo.pdb
+C:\Users\marcs\OneDrive\DOBLE FP\Banco_NET\producto2(P6)_GarciaCeva_Teresa\BancoDeTiempo\BancoDeTiempo\obj\Debug\BancoDeTiempo.csprojAssemblyReference.cache

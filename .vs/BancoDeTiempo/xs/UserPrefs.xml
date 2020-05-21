@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{CD36F281-8212-4B33-A84A-810FAB9EA075}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BancoDeTiempo/Form1.cs">
+    <Files>
+      <File FileName="BancoDeTiempo/GestorBBDD.cs" Line="1" Column="1" />
+      <File FileName="BancoDeTiempo/Form1.cs" Line="44" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BancoDeTiempo" expanded="True">
+            <Node name="BancoDeTiempo" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Properties" expanded="True">
+                <Node name="Settings.settings" expanded="True" />
+              </Node>
+              <Node name="BTModel.edmx" expanded="True">
+                <Node name="BTModel.tt" expanded="True" />
+              </Node>
+              <Node name="Form1.cs" expanded="True" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.BancoDeTiempo PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
